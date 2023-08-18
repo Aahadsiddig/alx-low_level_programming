@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio>
 
 /**
  * print_square - prints a square using the char #
