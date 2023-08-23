@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * isLower - determines whether ASCII is lowercase
@@ -24,7 +25,7 @@ int isDelimiter(char c)
 
 	for (i = 0; i < 12; i++)
 		if (c == delimiter[i])
-			return (i);
+			return (1);
 	return (0);
 }
 
