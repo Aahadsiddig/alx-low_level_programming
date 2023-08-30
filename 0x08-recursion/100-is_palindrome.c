@@ -2,7 +2,7 @@
 
 /**
  * last_index - returns the last index of a string
- * @n: pointer the string
+ * @s: string
  * Return: int
 */
 
