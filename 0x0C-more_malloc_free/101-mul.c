@@ -1,0 +1,85 @@
+#include "main.h"
+
+/**
+ * _puts - print a string followed by new line
+ * @str: pointer to string to print
+ * Return: void
+ */
+
+void _puts(char *str)
+{
+	int i = 0;
+
+	while (str[i])
+	{
+		_putchar(str[i]);
+		i++
+	}
+}
+
+/**
+ * _atoi - convert a string to an integer
+ * @s: char type string
+ * Return: integer converted
+ */
+
+int _atoi(const char *s)
+	unsigned long int resp = 0, firstn, i;
+
+	for (firstn = 0; !(s[firstn] >= 48 && s[firstn] <= 57); firstn++)
+	{
+		if (s[firstn] == '-')
+		{
+			sign *= -1;
+		}
+	}
+
+	for (i = firstn; s[i] >= 48 && s[i] <= 57; i++)
+	{
+		resp *= 10;
+		resp += (s[i] - 48);
+	}
+
+	return (sign * resp);
+}
+
+/**
+ * print_int - prints an integer
+ * @n: int
+ * Return: 0
+ */
+
+void print_int(unsigned long int n)
+{
+	unsigned long int d = 1, i, resp;
+	for (i = 0; n / d > 9; i++, d *= 10)
+	;
+
+	for (; d >= 1; n %= d, d /= 10)
+	{
+		resp = n / d;
+		_putchar('0' + resp);
+	}
+}
+
+/**
+ * main - print the result of the multiplication
+ * @argc: int
+ * @argv: list
+ * Return: 0
+ */
+
+int main(int argc, char const *argv[])
+{
+	(void)argc;
+
+	if (argc != 3)
+	{
+		_puts("Error ");
+		exit(98);
+	}
+	print_int(_atoi(argv[1] * _atoi(argv[2]));
+	_putchar('\n');
+
+	return (0);
+}
